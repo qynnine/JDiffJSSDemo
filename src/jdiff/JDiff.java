@@ -170,13 +170,14 @@ public class JDiff extends Doclet {
      * XML configuration file passed in.
      */
     public static void main(String[] args) {
+        System.out.println("This is the entry function");
         if (args.length == 0) {
             //showUsage();
             System.out.println("Looking for a local 'build.xml' configuration file");
         } else if (args.length == 1) {
             if (args[0].compareTo("-help") == 0 ||
-                args[0].compareTo("-h") == 0 ||
-                args[0].compareTo("?") == 0) {
+                    args[0].compareTo("-h") == 0 ||
+                    args[0].compareTo("?") == 0) {
                 showUsage();
             } else if (args[0].compareTo("-version") == 0) {
                 System.out.println("JDiff version: " + JDiff.version);
